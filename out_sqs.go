@@ -168,7 +168,7 @@ func FLBPluginFlushCtx(ctx, data unsafe.Pointer, length C.int, tag *C.char) int 
 			break
 		}
 
-		writeDebugLog(fmt.Sprintf("got new record from input. record length is: %d", len(record)))
+		writeDebugLog(fmt.Sprintf("got new record from input: %s", record))
 
 		if len(record) == 0 {
 			writeInfoLog("got empty record from input. skipping it")
